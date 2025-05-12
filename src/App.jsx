@@ -13,4 +13,13 @@ const initialFilms = [
   { title: 'Pulp Fiction', genre: 'Thriller' },
 ]
 
+function App() {
+  const [films, setFilms] = useState(initialFilms);
+  const [search, setSearch] = useState("")
+  const [filteredFilms, setFilteredfilms] = useState([])
 
+
+
+}
+
+export default App
