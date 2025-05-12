@@ -19,6 +19,14 @@ function App() {
   const [filteredFilms, setFilteredfilms] = useState([])
 
 
+  useEffect(() => {
+    const filteredFilms = search === "" ? films : films.filter((film) => film.genre === search)
+    setFilteredfilms(filteredFilms)
+
+  }, [search])
+
+
+
 
 }
 
