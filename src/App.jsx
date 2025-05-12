@@ -29,7 +29,12 @@ function App() {
 
   return (
     <div className='container'>
-
+      <select className='select-genre' value={search} onChange={(e) => setSearch(e.target.value)}>
+        <option value="">Tutti</option>
+        {initialFilms.map((film) => (
+          <option key={film.genre} value={film.genre}>{film.genre}</option>
+        ))};
+      </select>
       <h1>Lista dei film</h1>
       <ul>
         {filteredFilms.map((film, index) => (
