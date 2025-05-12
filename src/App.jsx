@@ -27,7 +27,20 @@ function App() {
 
 
 
+  return (
+    <div className='container'>
 
+      <h1>Lista dei film</h1>
+      <ul>
+        {filteredFilms.map((film, index) => (
+          <li key={film.index} className='list-film'>
+            <h3>{film.title}</h3>
+            <p>{film.genre}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default App
