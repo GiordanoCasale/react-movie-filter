@@ -38,8 +38,10 @@ function App() {
       {/* Menu a tendina per selezionare il genere */}
       <select
         className='select-genre'
+        // value controlla quale opzione è selezionata nel menu a tendina
+        // È collegato allo stato 'search' che contiene il genere selezionato
+        // Quando search cambia, il select mostra automaticamente il nuovo valore
         value={search}
-
         onChange={(e) => setSearch(e.target.value)}
       >
         {/* 
